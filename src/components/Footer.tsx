@@ -59,7 +59,7 @@ export function Footer() {
       </div>
       <div className="border-t border-line">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <p>Copyright © {new Date().getFullYear()} | Savaasachi | All rights reserved. | Developer</p>
           <p className="flex gap-4">
             <Link href="/privacy" className="hover:text-plum">Privacy</Link>
             <Link href="/terms" className="hover:text-plum">Terms</Link>
