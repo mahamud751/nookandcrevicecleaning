@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit), "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: var(--font-fraunces), "Iowan Old Style", Palatino, serif;
+  --color-cream: #fbf7f4;
+  --color-cream-2: #f4eee8;
+  --color-ink: #2c2428;
+  --color-muted: #6d6468;
+  --color-plum: #7a2f66;
+  --color-plum-deep: #541d48;
+  --color-berry: #9a3576;
+  --color-gold: #c4a36a;
+  --color-gold-deep: #8d6b38;
+  --color-line: #eadfd8;
+  --color-blush: #f8eef2;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans), "Avenir Next", sans-serif;
+  }
+
+  ::selection {
+    background: #f3d3e4;
+    color: #2c2428;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-plum);
+    outline-offset: 3px;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--color-plum);
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
